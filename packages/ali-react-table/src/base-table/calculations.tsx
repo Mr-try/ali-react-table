@@ -8,7 +8,7 @@ import {
   VisibleColumnDescriptor,
 } from './interfaces'
 import { BaseTable } from './table'
-import { AUTO_VIRTUAL_THRESHOLD, OVERSCAN_SIZE, sum } from './utils'
+import { OVERSCAN_SIZE, sum } from './utils'
 
 function resolveVirtualEnabled(virtualEnum: VirtualEnum, defaultValue: boolean) {
   if (virtualEnum == null || virtualEnum === 'auto') {
@@ -158,6 +158,7 @@ export function calculateRenderInfo(table: BaseTable): RenderInfo {
     columns: columnsProp,
     dataSource: dataSourceProp,
     defaultColumnWidth,
+    AUTO_VIRTUAL_THRESHOLD = 100,
   } = table.props
 
   const columns = processColumns(columnsProp, defaultColumnWidth)

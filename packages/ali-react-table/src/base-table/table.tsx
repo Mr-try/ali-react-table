@@ -106,7 +106,8 @@ export interface BaseTableProps {
 
   /** 列的默认宽度 */
   defaultColumnWidth?: number
-
+  /** 虚拟滚动开启的阈值 */
+  AUTO_VIRTUAL_THRESHOLD?: number
   /**
    * @deprecated
    * flowRoot 在表格 v2.4 后不再需要提供，请移除该属性

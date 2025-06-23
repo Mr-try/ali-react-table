@@ -38,7 +38,7 @@ export interface RenderInfo {
   stickyLeftMap: Map<number, number>
   stickyRightMap: Map<number, number>
   useVirtual: ResolvedUseVirtual
-
+  AUTO_VIRTUAL_THRESHOLD?: number
   /** props.columns 是否包含有效的锁列 */
   hasLockColumn: boolean
   /** 左侧锁定列的总宽度 */
